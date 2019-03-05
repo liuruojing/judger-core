@@ -1,0 +1,13 @@
+1.本判题内核部署环境需为window server 2008 服务器，其他windows版本可行性未知
+2.本判题内核需要安装在C盘根目录下，且先需在C盘根目录安装gcc编译器
+3.在database.ini中配置你的数据库连接参数
+4.gcc的include目录下删除window.h，禁止用户调用windowAPI
+5.需修改注册表信息，禁止异常程序弹出窗口，具体设置步骤在下方
+6.点击OnlineJudge下的OnlineJudgeStart.exe 开始判题。启动后会有两个dos界面，OnlineJudge是判题内核程序，OnlineJudgeStart是守护程序，防止判题内核意外终止。关闭时请先关闭守护程序，再关闭内核程序
+
+修改注册表信息步骤:
+windows+R:regedit进入注册表编辑器
+找到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting下的DontShowUI
+将其值改为1，如果没有该变量则需在右边新建。
+同时将HKEY_CURRENT_USER\Software\ Microsoft\Windows\Windows Error Reporting下的DontShowUI修改为1
+这个操作的目的是让用户提交的存在异常的程序不显示异常奔溃信息。 
