@@ -1,5 +1,5 @@
 本项目是自己做的一个算法网站的判题核心程序，可以在线实时监测算法程序是否Accept。
-本项目依赖windows环境以及windows提供的一系列API
+本项目依赖windows环境以及windows提供的一系列API,采用C语言编写
 
 1.本判题内核部署环境需为window server 2008 服务器，其他windows版本可行性未知
 2.本判题内核需要安装在C盘根目录下，且先需在C盘根目录安装gcc编译器
